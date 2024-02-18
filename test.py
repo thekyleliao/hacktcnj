@@ -53,9 +53,7 @@ convo
 
 while True:
   response = convo.send_message(input())
+  print("---------------------------------------")
   print(response.text)
+  print("-----------------------------------------")
 
-# while True:
-#     convo.send_message(input()) #this is how you tell the AI what to say
-#     print(convo.last.text)
-#     #what the AI says is convo.last.text
