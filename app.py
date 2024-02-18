@@ -7,7 +7,8 @@ load_dotenv()
 import os
 
 api_key = os.getenv("API_KEY")
-api_key = st.secrets["API_KEY"]
+# Below only for deployment. Comment out top option when running in deployment.
+# api_key = st.secrets["API_KEY"]
 
 """
 At the command line, only need to run once to install the package via pip:
