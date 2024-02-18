@@ -5,10 +5,12 @@ from multiprocessing import Pipe, Process, current_process
     # Initialize the Gemini 
 
 def Gemini(streamlitConn, newResponse):
+    import streamlit as st
     from dotenv import load_dotenv
     load_dotenv()
     import os
-    api_key = os.getenv("API_KEY")
+#    api_key = os.getenv("API_KEY")
+    api_key = st.secrets["API_KEY"]
     import google.generativeai as genai
     genai.configure(api_key=api_key)
     # Set up the model
